@@ -1,0 +1,269 @@
+<!--meta
+{
+  "title": "Volume Guard — Set it once. Watch in peace.",
+  "description": "Volume Guard is a browser extension that holds your movie volume at the level you chose. It lowers loud songs and action scenes and lifts quiet dialogue, on your device.",
+  "path": "/",
+  "entry": "home",
+  "body": "home",
+  "themeColor": "#e7e2f4"
+}
+-->
+<canvas id="world" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+
+<aside class="rail" aria-hidden="true">
+  <div class="rail-line"><i class="rail-fill"></i><b class="rail-orb"><span class="rail-label">Start</span></b></div>
+</aside>
+<div class="peaks-hud" aria-hidden="true"><i class="peak-dot"></i><b data-peaks>00</b><span>/ 12 peaks tamed</span></div>
+
+<main id="main">
+  <section class="s s-hero" data-t="0" data-intro>
+    <div class="hero-top">
+      <span class="label">A browser extension by Nur Hasan Masum</span>
+      <span class="label">Chrome · Edge · Open source</span>
+    </div>
+    <h1 class="mega">
+      <span class="l1" data-split>Set it once.</span>
+      <span class="l2" data-split>Watch in <em>peace.</em></span>
+    </h1>
+    <div class="hero-foot">
+      <p class="hero-lede reveal">
+        A browser extension that holds your movie volume at the level you chose. It lowers the blasts and lifts the
+        whispers, so you never reach for the volume button again.
+      </p>
+      <div class="scroll-cue"><span class="label">Scroll to listen</span><i></i></div>
+      <a class="btn magnet" href="#get">
+        Get Volume Guard
+        <span class="arrow"><svg class="icon" aria-hidden="true"><use href="/icons/sprite.svg#arrow" /></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="s s-how" id="how" data-t="0.08" aria-labelledby="how-title">
+    <div class="how">
+      <span class="eyebrow">How it works</span>
+      <h2 class="huge" id="how-title" data-split>Every movie is <em>too loud and too quiet.</em></h2>
+      <ol class="steps">
+        <li class="reveal">
+          <div>
+            <h3>Pick your level</h3>
+            <p>Set a target volume once, or choose Night, Normal or Cinema. That is your line.</p>
+          </div>
+          <svg class="icon" aria-hidden="true"><use href="/icons/sprite.svg#dial" /></svg>
+        </li>
+        <li class="reveal">
+          <div>
+            <h3>Press play</h3>
+            <p>While the video plays, Volume Guard measures how loud it is, many times a second, on your device.</p>
+          </div>
+          <svg class="icon" aria-hidden="true"><use href="/icons/sprite.svg#wave" /></svg>
+        </li>
+        <li class="reveal">
+          <div>
+            <h3>Touch nothing</h3>
+            <p>Loud scenes come down fast, quiet ones come up gently. Your hand stays on the popcorn.</p>
+          </div>
+          <svg class="icon" aria-hidden="true"><use href="/icons/sprite.svg#hand" /></svg>
+        </li>
+      </ol>
+    </div>
+    <figure class="popup-shot popup-peek reveal" data-speed="-0.15">
+      <img src="/img/popup/popup-normal.webp" width="720" height="1400" alt="The Volume Guard popup: target volume dial at 68 percent, live meters and presets" loading="lazy" />
+      <figcaption>The real popup</figcaption>
+    </figure>
+  </section>
+
+  <section class="s s-scene w-left" id="song" data-t="0.24" aria-labelledby="song-title">
+    <span class="ghost-num" aria-hidden="true">01</span>
+    <div class="w-copy">
+      <span class="eyebrow">Scene one · The surge</span>
+      <h2 class="huge" id="song-title" data-split>The <em>Song</em></h2>
+      <p class="reveal">
+        A dance number starts and the volume jumps. Bollywood loves a big song, and so do we, just not at twice the
+        volume of the conversation before it.
+      </p>
+      <ul class="tags reveal"><li>Songs</li><li>Dance numbers</li><li>Montages</li></ul>
+      <a class="more reveal" href="/scenes#song"><span class="roll" data-text="Step inside the Song"><span>Step inside the Song</span></span><i aria-hidden="true">→</i></a>
+    </div>
+    <figure class="postcard" data-speed="-0.25" data-rot="5">
+      <img src="/img/scenes/song.webp" width="720" height="576" alt="The Song: a dance floor of pulsing bars under warm lights" loading="lazy" />
+      <figcaption><span>No. 01</span><span>The Song</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="s s-scene w-right" id="blast" data-t="0.42" aria-labelledby="blast-title">
+    <span class="ghost-num" aria-hidden="true">02</span>
+    <div class="w-copy">
+      <span class="eyebrow">Scene two · The spike</span>
+      <h2 class="huge" id="blast-title" data-split>The <em>Blast</em></h2>
+      <p class="reveal">
+        Hollywood action: a car chase, a gunfight, then an explosion that shakes the room. A limiter catches the
+        sharpest peaks before they reach your ears.
+      </p>
+      <ul class="tags reveal"><li>Explosions</li><li>Gunfire</li><li>Score swells</li></ul>
+      <a class="more reveal" href="/scenes#blast"><span class="roll" data-text="Step inside the Blast"><span>Step inside the Blast</span></span><i aria-hidden="true">→</i></a>
+    </div>
+    <figure class="postcard" data-speed="-0.2" data-rot="-4">
+      <img src="/img/scenes/blast.webp" width="720" height="576" alt="The Blast: a block of tall spikes and a shockwave ring" loading="lazy" />
+      <figcaption><span>No. 02</span><span>The Blast</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="s s-scene w-left" id="whisper" data-t="0.6" aria-labelledby="whisper-title">
+    <span class="ghost-num" aria-hidden="true">03</span>
+    <div class="w-copy">
+      <span class="eyebrow">Scene three · The dip</span>
+      <h2 class="huge" id="whisper-title" data-split>The <em>Whisper</em></h2>
+      <p class="reveal">
+        Then two people talk quietly and you lean towards the speaker. Volume Guard lifts the dialogue gently, with a
+        cap so background hiss never gets blown up.
+      </p>
+      <ul class="tags reveal"><li>Dialogue</li><li>Whispers</li><li>Late night</li></ul>
+      <a class="more reveal" href="/scenes#whisper"><span class="roll" data-text="Step inside the Whisper"><span>Step inside the Whisper</span></span><i aria-hidden="true">→</i></a>
+    </div>
+    <figure class="postcard" data-speed="-0.25" data-rot="4">
+      <img src="/img/scenes/whisper.webp" width="720" height="576" alt="The Whisper: a small lamp-lit room with low, quiet bars" loading="lazy" />
+      <figcaption><span>No. 03</span><span>The Whisper</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="s s-night" id="night" data-t="0.8" aria-labelledby="night-title">
+    <div class="night-panel">
+      <span class="eyebrow">Night mode</span>
+      <h2 class="stack" id="night-title">
+        <span data-split>One scene.</span>
+        <span data-split><em>All night.</em></span>
+        <span data-split>Nobody wakes.</span>
+      </h2>
+      <div class="meter" role="group" aria-label="Demo meter">
+        <div><b data-meter="target">−17</b><span class="label">Target LUFS</span></div>
+        <div><b data-meter="in">−17</b><span class="label">Incoming</span></div>
+        <div><b data-meter="out">−17</b><span class="label">Output</span></div>
+        <div><b data-meter="gain">+0</b><span class="label">Gain dB</span></div>
+      </div>
+      <p class="when reveal">A live demo of the leveller, drawn from a made-up soundtrack. The real meters live in the popup.</p>
+    </div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Lower fast</span><i></i><span>Lift slowly</span><i></i><span>Boost capped at 6 dB</span><i></i><span>A limiter catches peaks</span><i></i><span>Nothing leaves your device</span><i></i><span>No account</span><i></i><span>No analytics</span><i></i>
+        <span>Lower fast</span><i></i><span>Lift slowly</span><i></i><span>Boost capped at 6 dB</span><i></i><span>A limiter catches peaks</span><i></i><span>Nothing leaves your device</span><i></i><span>No account</span><i></i><span>No analytics</span><i></i>
+      </div>
+    </div>
+  </section>
+
+  <section class="s s-line" data-t="1" aria-labelledby="line-title">
+    <span class="eyebrow">The line</span>
+    <h2 class="huge" id="line-title" data-split>That was <em>one</em> scene.</h2>
+    <p class="reveal">Your movie has hundreds. Volume Guard handles every one, and you never touch the remote.</p>
+  </section>
+
+  <section class="panel control" id="control" data-dark aria-labelledby="control-title">
+    <div class="control-in">
+      <div class="control-copy">
+        <span class="eyebrow">Control room</span>
+        <h2 class="huge" id="control-title" data-split>Two taps. <em>That is the whole app.</em></h2>
+        <p class="reveal">
+          Open the popup, set your level, done. The dial shows your target, the meters show the sound coming in and
+          the balanced sound going out, and a status line tells you exactly what it is doing.
+        </p>
+        <ul class="checks reveal">
+          <li>Turn it on per site, or for every site</li>
+          <li>Pause for 15 minutes, or bypass in one click</li>
+          <li>Dark or light, to match your browser</li>
+        </ul>
+        <div class="shortcut reveal">
+          <span class="kbd">Alt</span><span class="plus">+</span><span class="kbd">Shift</span><span class="plus">+</span><span class="kbd">V</span>
+          <span class="label">Turns it on and off</span>
+        </div>
+      </div>
+      <figure class="popup-shot popup-cycle reveal" data-cycle>
+        <img src="/img/popup/popup-normal.webp" width="720" height="1400" alt="Popup with the Normal preset" class="on" data-caption="Normal" loading="lazy" />
+        <img src="/img/popup/popup-night.webp" width="720" height="1400" alt="Popup with the Night preset" data-caption="Night" loading="lazy" />
+        <img src="/img/popup/popup-cinema.webp" width="720" height="1400" alt="Popup with the Cinema preset" data-caption="Cinema" loading="lazy" />
+        <img src="/img/popup/popup-paused.webp" width="720" height="1400" alt="Popup while paused for 15 minutes" data-caption="Paused" loading="lazy" />
+        <figcaption data-cycle-caption>Normal</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="panel presets" id="presets" data-dark aria-labelledby="presets-title">
+    <span class="eyebrow">Presets</span>
+    <h2 class="huge" id="presets-title" data-split>Pick your <em>level.</em></h2>
+    <div class="knob-run" data-run role="group" aria-label="Presets">
+      <button class="knob" type="button" data-preset="night" aria-pressed="false">
+        <span class="knob-face"><i></i></span>
+        <span class="knob-name">Night</span>
+        <span class="knob-meta">52% · boost 9 dB</span>
+      </button>
+      <button class="knob" type="button" data-preset="normal" aria-pressed="true">
+        <span class="knob-face"><i></i></span>
+        <span class="knob-name">Normal</span>
+        <span class="knob-meta">68% · boost 6 dB</span>
+      </button>
+      <button class="knob" type="button" data-preset="cinema" aria-pressed="false">
+        <span class="knob-face"><i></i></span>
+        <span class="knob-name">Cinema</span>
+        <span class="knob-meta">82% · boost 4 dB</span>
+      </button>
+      <button class="knob" type="button" data-preset="custom" aria-pressed="false">
+        <span class="knob-face"><i></i></span>
+        <span class="knob-name">Your own</span>
+        <span class="knob-meta">20–100% · you choose</span>
+      </button>
+    </div>
+    <p class="mid reveal" data-preset-text>
+      Normal keeps everyday viewing even. Night holds things low and lifts dialogue more, so you can watch while the
+      house sleeps. Cinema lets the movie breathe. Or set your own level and limits.
+    </p>
+  </section>
+
+  <section class="panel faq" id="faq" aria-labelledby="faq-title">
+    <div class="faq-in">
+      <div>
+        <span class="eyebrow">Good to know</span>
+        <h2 class="huge" id="faq-title" data-split>Questions, <em>answered.</em></h2>
+        <a class="more reveal" href="/faq"><span class="roll" data-text="All questions"><span>All questions</span></span><i aria-hidden="true">→</i></a>
+      </div>
+      <div class="qa">
+        <details>
+          <summary>Is it free?</summary>
+          <p>Yes. Volume Guard is open source and has no ads, accounts or paid tiers.</p>
+        </details>
+        <details>
+          <summary>Which sites does it work on?</summary>
+          <p>
+            Most sites that play video in the browser, including embedded players. Copy-protected streams cannot be
+            adjusted directly; there Volume Guard leaves the sound untouched and tells you why.
+          </p>
+        </details>
+        <details>
+          <summary>What about Netflix and other protected streams?</summary>
+          <p>
+            An experimental Compatibility mode can level a whole tab's audio. It asks for extra permission only when you
+            turn it on and may add a small delay. It is still being tested on real sites.
+          </p>
+        </details>
+        <details>
+          <summary>Does it see what I watch?</summary>
+          <p>No. It never reads titles, page content or history, and it makes no network requests. Audio is measured in memory and never recorded.</p>
+        </details>
+        <details>
+          <summary>Where can I get it?</summary>
+          <p>It is not in the Chrome Web Store yet. You can build it from the source code today; the docs walk you through it.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel outro" id="get" aria-labelledby="get-title">
+    <h2 class="mega2" id="get-title" data-split>Set it <em>once.</em></h2>
+    <div class="outro-cta">
+      <a class="btn magnet" href="/docs/getting-started">
+        Get Volume Guard
+        <span class="arrow"><svg class="icon" aria-hidden="true"><use href="/icons/sprite.svg#arrow" /></svg></span>
+      </a>
+      <a class="btn light" href="https://github.com/masumhasan/volcon" rel="noopener">View the source</a>
+    </div>
+    <p class="label soon">Chrome &amp; Edge · Open source · Not in the Chrome Web Store yet</p>
+  </section>
+</main>

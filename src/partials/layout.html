@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}" />
+    <meta name="theme-color" content="{{themeColor}}" />
+    {{{robots}}}
+    <link rel="canonical" href="{{canonical}}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48.png" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Volume Guard" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:url" content="{{canonical}}" />
+    <meta property="og:image" content="https://volumeguard.web.app/img/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Volume Guard: set it once, watch in peace" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {{{styles}}}
+    <noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+    {{{script}}}
+    {{{devScript}}}
+  </head>
+  <body class="{{bodyClass}}">
+    <a class="skip" href="#main">Skip to content</a>
+    {{> loader}}
+    <div class="cursor" aria-hidden="true"><i></i></div>
+    {{> header}}
+    {{> menu}}
+    {{{content}}}
+    {{> footer}}
+  </body>
+</html>

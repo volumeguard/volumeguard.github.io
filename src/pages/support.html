@@ -1,0 +1,86 @@
+<!--meta
+{
+  "title": "Support — Volume Guard",
+  "description": "Fix common Volume Guard problems and learn how to report an issue so it can be fixed quickly.",
+  "path": "/support",
+  "entry": "page",
+  "body": "page"
+}
+-->
+<main id="main" class="doc">
+  <div class="wrap">
+    <header data-intro>
+      <span class="eyebrow">Support</span>
+      <h1 data-split>Something <em>off?</em></h1>
+      <p class="lead reveal">
+        Most problems have a quick fix. Try the steps below first. If that does not help, tell us on GitHub and we will
+        take a look.
+      </p>
+    </header>
+
+    <section class="reveal" aria-labelledby="s-nothing">
+      <h2 id="s-nothing">The volume does not change</h2>
+      <ol class="steps-list">
+        <li>Make sure the video is playing. Volume Guard starts once there is sound, and the status shows <b>Ready — start playback</b> until then.</li>
+        <li>Open the popup and check the master switch at the top is on, and that it is not paused.</li>
+        <li>Look at the status line. <b>On target</b> means the sound is already at your level, so there is nothing to correct.</li>
+        <li>If you just installed or updated the extension, reload the video page once.</li>
+      </ol>
+    </section>
+
+    <section class="reveal" aria-labelledby="s-protected">
+      <h2 id="s-protected">The popup says the video is protected or blocked</h2>
+      <p>
+        Copy-protected and some cross-origin videos cannot be adjusted directly by any extension. Volume Guard leaves them
+        untouched on purpose, so playback is never muted by mistake. You can try the experimental
+        <a href="/docs/compatibility-mode">Compatibility mode</a> from the same popup.
+      </p>
+    </section>
+
+    <section class="reveal" aria-labelledby="s-auto">
+      <h2 id="s-auto">It does not start by itself on a site</h2>
+      <p>
+        Volume Guard runs on a tab after you open its popup there. To have it start automatically, turn on
+        <b>Always on for this site</b> and accept the browser's permission prompt for that site.
+      </p>
+    </section>
+
+    <section class="reveal" aria-labelledby="s-sound">
+      <h2 id="s-sound">It sounds wrong</h2>
+      <ul>
+        <li><b>Hiss rises in quiet scenes:</b> lower <b>Maximum boost</b> on the settings page.</li>
+        <li><b>Music sounds flat:</b> raise the target or lower <b>Maximum reduction</b>.</li>
+        <li><b>The volume seems to breathe around speech:</b> move <b>Reaction speed</b> towards Smooth.</li>
+        <li><b>Sound is behind the picture:</b> this can happen in Compatibility mode. Turn it off for that tab.</li>
+      </ul>
+    </section>
+
+    <section class="reveal" aria-labelledby="s-reset">
+      <h2 id="s-reset">Start fresh</h2>
+      <p>
+        On the settings page, <b>Reset tuning to defaults</b> brings back the Normal preset. To remove access to a site,
+        delete it from the site list there, or from your browser's extension settings.
+      </p>
+    </section>
+
+    <section class="card reveal" aria-labelledby="s-report">
+      <h2 id="s-report">Report a problem</h2>
+      <p>Open an issue on GitHub. These details help fix it quickly:</p>
+      <ul>
+        <li>Your browser and its version (for example Chrome 131 or Edge 131) and your operating system.</li>
+        <li>The site, and whether the video was a film, a series or a short clip.</li>
+        <li>What the popup's status line said.</li>
+        <li>What you expected and what happened instead.</li>
+        <li>Whether Compatibility mode was on.</li>
+      </ul>
+      <p>Please do not include personal information. For a security problem, do not post details publicly: open an issue asking for a private contact.</p>
+      <div class="doc-cta">
+        <a class="btn magnet" href="https://github.com/masumhasan/volcon/issues" rel="noopener">
+          Open an issue
+          <span class="arrow"><svg class="icon" aria-hidden="true"><use href="/icons/sprite.svg#arrow" /></svg></span>
+        </a>
+        <a class="btn light" href="/faq">Read the FAQ</a>
+      </div>
+    </section>
+  </div>
+</main>

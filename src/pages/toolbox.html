@@ -1,0 +1,195 @@
+<!--meta
+{
+  "title": "Toolbox — Volume Guard",
+  "description": "Every control in Volume Guard, one at a time: the target dial, the leveller, the boost cap, the limiter, bypass, pause, per-site, compatibility mode and the shortcut.",
+  "path": "/toolbox",
+  "entry": "toolbox",
+  "body": "toolbox",
+  "nav": "toolbox",
+  "themeColor": "#1d1b4f"
+}
+-->
+<div class="bg" aria-hidden="true"><i data-for="calm"></i><i data-for="loud"></i><i data-for="teal"></i><i data-for="slate"></i></div>
+<div class="ghost" aria-hidden="true"><span class="ghost-in" data-ghost>Parts</span></div>
+<canvas id="board" aria-hidden="true"></canvas>
+
+<form class="hud" aria-label="Try the controls">
+  <div class="hud-target">
+    <label class="hud-k" for="hud-target">Target</label>
+    <input id="hud-target" type="range" min="20" max="100" step="1" value="68" aria-describedby="hud-target-value" />
+    <output id="hud-target-value" for="hud-target">68% · −14 LUFS</output>
+  </div>
+  <label class="hud-switch">
+    <input id="hud-bypass" type="checkbox" role="switch" />
+    <span class="hud-k">Bypass</span>
+  </label>
+  <div class="hud-tried"><span class="hud-k">Parts tried</span><b data-tried>0</b><span class="hud-of">/ 9</span></div>
+</form>
+
+<main id="main">
+  <section class="pc pc-hero" data-part="intro" data-bg="calm" data-intro aria-labelledby="toolbox-title">
+    <div class="pc-copy">
+      <span class="eyebrow reveal">The toolbox</span>
+      <h1 class="pc-mega" id="toolbox-title" data-split>Every part, <em>in your hands.</em></h1>
+      <p class="pc-lede reveal">
+        Volume Guard has nine parts. Scroll through them one by one, and use the controls in the corner: move the
+        target and watch the leveller follow, or bypass it to hear (and see) the raw soundtrack.
+      </p>
+      <div class="pc-cue reveal"><span class="label">Scroll through the parts</span><i></i></div>
+    </div>
+    <figure class="popup-shot pc-popup reveal">
+      <img src="/img/popup/popup-normal.webp" width="720" height="1400" alt="The Volume Guard popup with the target dial, live meters, presets and the pause button" loading="lazy" />
+      <figcaption>The real popup</figcaption>
+    </figure>
+  </section>
+
+  <section class="pc" data-part="dial" data-bg="teal" aria-labelledby="part-dial">
+    <div class="pc-copy">
+      <span class="eyebrow">Part 01</span>
+      <h2 class="pc-title" id="part-dial" data-split>Target dial</h2>
+      <p class="pc-tag reveal">One number: how loud you want it.</p>
+      <p class="pc-body reveal">
+        The dial goes from 20% (a whisper) to 100% (cinema). At 68% the target is −14 LUFS, and every percent moves it
+        by 0.25 LU. The teal lines on the board are your target; try the slider.
+      </p>
+      <dl class="spec reveal">
+        <div><dt>Range</dt><dd>20–100%</dd></div>
+        <div><dt>Default</dt><dd>68% · −14 LUFS</dd></div>
+        <div><dt>Step</dt><dd>0.25 LU per percent</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="pc" data-part="leveller" data-bg="loud" aria-labelledby="part-leveller">
+    <div class="pc-copy">
+      <span class="eyebrow">Part 02</span>
+      <h2 class="pc-title" id="part-leveller" data-split>Leveller</h2>
+      <p class="pc-tag reveal">Down fast, up slowly.</p>
+      <p class="pc-body reveal">
+        Volume Guard measures loudness many times a second and moves the volume towards your target. Loud scenes come
+        down quickly; quiet scenes rise gently, so nothing pumps. Within 1 dB of the target it leaves the sound alone.
+      </p>
+      <dl class="spec reveal">
+        <div><dt>Measures</dt><dd>Perceived loudness, on your device</dd></div>
+        <div><dt>Dead band</dt><dd>1 dB</dd></div>
+        <div><dt>Behaviour</dt><dd>Fast down, slow up</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="pc" data-part="boost" data-bg="teal" aria-labelledby="part-boost">
+    <div class="pc-copy">
+      <span class="eyebrow">Part 03</span>
+      <h2 class="pc-title" id="part-boost" data-split>Boost cap</h2>
+      <p class="pc-tag reveal">Lifts the quiet, never the hiss.</p>
+      <p class="pc-body reveal">
+        Quiet dialogue is lifted, but only so far. Boosting a whisper all the way would also blow up background noise,
+        so each preset has a cap: some quiet bars stay below the line on purpose.
+      </p>
+      <dl class="spec reveal">
+        <div><dt>Night</dt><dd>Up to 9 dB</dd></div>
+        <div><dt>Normal</dt><dd>Up to 6 dB</dd></div>
+        <div><dt>Cinema</dt><dd>Up to 4 dB</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="pc" data-part="limiter" data-bg="loud" aria-labelledby="part-limiter">
+    <div class="pc-copy">
+      <span class="eyebrow">Part 04</span>
+      <h2 class="pc-title" id="part-limiter" data-split>Limiter</h2>
+      <p class="pc-tag reveal">Catches what is too fast to level.</p>
+      <p class="pc-body reveal">
+        A gunshot or a door slam is over before any leveller can react. A safety limiter sits at the end of the chain
+        and rounds off those sharp peaks (the amber line on the board) before they reach your ears.
+      </p>
+      <dl class="spec reveal">
+        <div><dt>Acts on</dt><dd>Sudden peaks</dd></div>
+        <div><dt>Strength</dt><dd>Low, medium or high per preset</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="pc" data-part="bypass" data-bg="slate" aria-labelledby="part-bypass">
+    <div class="pc-copy">
+      <span class="eyebrow">Part 05</span>
+      <h2 class="pc-title" id="part-bypass" data-split>Bypass</h2>
+      <p class="pc-tag reveal">Hear the original in one click.</p>
+      <p class="pc-body reveal">
+        Curious what the movie sounds like without Volume Guard? Bypass passes the sound through untouched, without
+        reloading the video. Flip the Bypass switch in the corner to compare.
+      </p>
+    </div>
+  </section>
+
+  <section class="pc" data-part="pause" data-bg="slate" aria-labelledby="part-pause">
+    <div class="pc-copy">
+      <span class="eyebrow">Part 06</span>
+      <h2 class="pc-title" id="part-pause" data-split>Pause</h2>
+      <p class="pc-tag reveal">Fifteen minutes off, then back on its own.</p>
+      <p class="pc-body reveal">
+        Watching a concert where the swings are the point? Pause Volume Guard for 15 minutes from the popup. It comes
+        back by itself, so you never forget to turn it on again.
+      </p>
+      <dl class="spec reveal"><div><dt>Pause length</dt><dd>15 minutes</dd></div></dl>
+    </div>
+  </section>
+
+  <section class="pc" data-part="site" data-bg="teal" aria-labelledby="part-site">
+    <div class="pc-copy">
+      <span class="eyebrow">Part 07</span>
+      <h2 class="pc-title" id="part-site" data-split>Per-site</h2>
+      <p class="pc-tag reveal">On where you watch, off everywhere else.</p>
+      <p class="pc-body reveal">
+        Choose "Always on for this site" and Volume Guard asks your browser for access to that one site only. The front
+        row of the board is a site you turned on; the back row is one you did not. Remove access any time in Settings.
+      </p>
+    </div>
+  </section>
+
+  <section class="pc" data-part="compat" data-bg="calm" aria-labelledby="part-compat">
+    <div class="pc-copy">
+      <span class="eyebrow">Part 08 · Experimental</span>
+      <h2 class="pc-title" id="part-compat" data-split>Compatibility</h2>
+      <p class="pc-tag reveal">For protected streams, with honest limits.</p>
+      <p class="pc-body reveal">
+        Copy-protected video cannot be adjusted directly, so Compatibility mode levels the whole tab's audio instead.
+        It asks for extra permissions only when you turn it on, may add a small delay to the sound, and has not yet
+        been verified on real protected sites.
+      </p>
+      <dl class="spec reveal">
+        <div><dt>Status</dt><dd>Experimental</dd></div>
+        <div><dt>Asks for</dt><dd>Tab capture, when you turn it on</dd></div>
+        <div><dt>Trade-off</dt><dd>A small audio delay</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="pc" data-part="shortcut" data-bg="calm" aria-labelledby="part-shortcut">
+    <div class="pc-copy">
+      <span class="eyebrow">Part 09</span>
+      <h2 class="pc-title" id="part-shortcut" data-split>Shortcut</h2>
+      <p class="pc-tag reveal">On and off without opening anything.</p>
+      <p class="pc-body reveal">
+        Press Alt+Shift+V to turn Volume Guard on or off. On this page the same keys flip the Bypass switch, so you can
+        try it now.
+      </p>
+      <div class="keys reveal"><span class="kbd">Alt</span><span class="plus">+</span><span class="kbd">Shift</span><span class="plus">+</span><span class="kbd">V</span></div>
+    </div>
+  </section>
+
+  <section class="pc pc-end" data-part="end" data-bg="calm" aria-labelledby="toolbox-end">
+    <div class="pc-copy">
+      <span class="eyebrow">That is all of it</span>
+      <h2 class="pc-mega" id="toolbox-end" data-split>Nine parts. <em>Zero effort.</em></h2>
+      <p class="pc-lede reveal">Set it once and let the parts do their jobs. The docs explain each setting in detail.</p>
+      <div class="pc-end-row reveal">
+        <a class="btn magnet" href="/docs/getting-started">
+          Get started
+          <span class="arrow"><svg class="icon" aria-hidden="true"><use href="/icons/sprite.svg#arrow" /></svg></span>
+        </a>
+        <a class="btn light" href="/docs/presets-and-settings">Every setting</a>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,191 @@
+<!--meta
+{
+  "title": "FAQ — Volume Guard",
+  "description": "Answers about Volume Guard: how it levels movie volume, which sites it works on, protected streams, privacy and the project.",
+  "path": "/faq",
+  "entry": "page",
+  "body": "page",
+  "nav": "faq"
+}
+-->
+<main id="main" class="doc">
+  <div class="wrap">
+    <header data-intro>
+      <span class="eyebrow">Good to know</span>
+      <h1 data-split>Questions, <em>answered.</em></h1>
+      <p class="lead reveal">
+        Short answers about what Volume Guard does, where it works and what it keeps private. Missing something? Ask on
+        <a href="https://github.com/masumhasan/volcon/issues" rel="noopener">GitHub</a>.
+      </p>
+    </header>
+
+    <section class="faq-group reveal" aria-labelledby="faq-using">
+      <h2 id="faq-using">Using it</h2>
+      <div class="qa">
+        <details>
+          <summary>What does Volume Guard actually do?</summary>
+          <div>
+            <p>
+              It keeps a video at the level you chose. When a song or an action scene gets loud, it turns the sound down
+              quickly. When people talk quietly, it lifts the sound gently, up to a limit. It never changes the video
+              itself, only how loud it plays.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>How do I set my level?</summary>
+          <div>
+            <p>
+              Open the popup and turn the dial, use the slider, or pick a preset: Night, Normal or Cinema. Normal sits at
+              68 percent. See <a href="/docs/presets-and-settings">Presets and settings</a>.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Will it make quiet scenes much louder?</summary>
+          <div>
+            <p>
+              Only up to a limit you control: 6 dB on Normal, 9 dB on Night, never more than 12 dB. Boosting more would
+              also lift background hiss, so the limit is deliberate. Silence is never boosted.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>A sudden bang still comes through for a moment. Why?</summary>
+          <div>
+            <p>
+              Volume Guard cannot hear ahead without delaying the sound, which would put it out of sync with the picture.
+              The first fraction of a second of a sudden loud cut passes through, and a limiter keeps that peak in check.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>How do I turn it off quickly?</summary>
+          <div>
+            <p>
+              Press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>, use the switch at the top of the popup, or choose
+              <b>Pause for 15 min</b>. You can change the shortcut in your browser's extension shortcut settings.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="faq-group reveal" aria-labelledby="faq-sites">
+      <h2 id="faq-sites">Sites and limits</h2>
+      <div class="qa">
+        <details>
+          <summary>Which sites does it work on?</summary>
+          <div>
+            <p>
+              Most sites that play video in the browser, including players inside iframes. To have it start by itself on
+              a site, turn on <b>Always on for this site</b> in the popup; your browser asks for permission for that site
+              only.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>What about Netflix and other protected streams?</summary>
+          <div>
+            <p>
+              Copy-protected video cannot be adjusted directly by any extension. Volume Guard notices this, leaves the
+              sound exactly as it was and tells you why. An experimental
+              <a href="/docs/compatibility-mode">Compatibility mode</a> can level the whole tab's audio instead. It asks
+              for extra permission only when you turn it on, may add a small delay, and has not yet been verified on real
+              protected sites.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Which browsers are supported?</summary>
+          <div>
+            <p>Chrome and Microsoft Edge, version 114 or newer. Firefox and Safari are not supported yet.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Does it work with the player's own volume control?</summary>
+          <div>
+            <p>
+              Yes. The correction is applied on top of the player's volume, so the player's slider and mute keep working
+              as usual.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="faq-group reveal" aria-labelledby="faq-privacy">
+      <h2 id="faq-privacy">Privacy</h2>
+      <div class="qa">
+        <details>
+          <summary>Does it see what I watch?</summary>
+          <div>
+            <p>
+              No. It does not read page content, video titles or your browsing history. It only uses a site's name (for
+              example www.youtube.com) to apply your per-site choice, and that stays on your device.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Is my audio recorded or sent anywhere?</summary>
+          <div>
+            <p>
+              No. Sound is measured in memory to decide how loud to play it and then discarded. The extension makes no
+              network requests and has no analytics, telemetry or advertising.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Why does it ask for permissions?</summary>
+          <div>
+            <p>
+              At install it needs storage for your settings and access to the tab you are looking at, only after you
+              open the popup. Access to a whole site, and the two permissions for Compatibility mode, are requested only
+              when you turn those features on. Details are in
+              <a href="/docs/privacy-and-permissions">Privacy and permissions</a>.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="faq-group reveal" aria-labelledby="faq-project">
+      <h2 id="faq-project">The project</h2>
+      <div class="qa">
+        <details>
+          <summary>Is it free?</summary>
+          <div>
+            <p>Yes. It has no ads, accounts or paid tiers, and the source code is public.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Where can I get it?</summary>
+          <div>
+            <p>
+              It is not in the Chrome Web Store yet. You can build it from the source code today:
+              <a href="/docs/getting-started">Getting started</a> walks you through it in about five minutes.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Who makes it?</summary>
+          <div>
+            <p>
+              Volume Guard is made by <a href="https://masumhasan.github.io" rel="noopener">Nur Hasan Masum</a>, a
+              lifelong movie fan who got tired of reaching for the volume button.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>How can I report a problem or suggest an idea?</summary>
+          <div>
+            <p>
+              Open an issue on <a href="https://github.com/masumhasan/volcon/issues" rel="noopener">GitHub</a>. The
+              <a href="/support">support page</a> lists what to include so it can be fixed quickly.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </div>
+</main>

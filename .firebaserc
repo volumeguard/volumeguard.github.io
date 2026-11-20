@@ -1,0 +1,11 @@
+{
+  "projects": {
+    "default": "teamvolumeguard"
+  },
+  "targets": {
+    "teamvolumeguard": {
+      "hosting": {}
+    }
+  },
+  "etags": {}
+}

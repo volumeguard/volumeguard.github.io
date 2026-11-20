@@ -1,0 +1,7 @@
+.firebase/
+firebase-debug.log*
+node_modules/
+dist/
+.dev-dist/
+ui_reference/
+config.bat

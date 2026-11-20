@@ -1,0 +1,39 @@
+/* Without JavaScript: no loader curtain, no custom cursor, everything visible, no 3D. */
+.loader,
+.cursor,
+.rail,
+.peaks-hud,
+#world,
+.sound {
+  display: none !important;
+}
+
+.reveal,
+[data-split] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.home {
+  background: linear-gradient(#c9cdf3, #f3efe7 40%, #e6cfd6 70%, #111317) !important;
+}
+
+.control {
+  clip-path: none !important;
+}
+
+.menu-toggle {
+  display: none !important;
+}
+
+@media (max-width: 860px) {
+  .nav-links {
+    display: flex !important;
+    gap: 14px !important;
+    font-size: 14px;
+  }
+
+  .nav-in {
+    grid-template-columns: 1fr !important;
+  }
+}

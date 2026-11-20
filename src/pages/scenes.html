@@ -1,0 +1,108 @@
+<!--meta
+{
+  "title": "Scenes — Volume Guard",
+  "description": "Three moments every movie fan knows: the loud song, the action blast and the quiet whisper. See each one before and after Volume Guard.",
+  "path": "/scenes",
+  "entry": "scenes",
+  "body": "scenes",
+  "nav": "scenes",
+  "themeColor": "#2b2370"
+}
+-->
+<canvas id="stage" aria-hidden="true"></canvas>
+
+<main id="main">
+  <section class="w-hero" data-w="0" data-intro aria-labelledby="scenes-title">
+    <span class="eyebrow reveal">Three moments, one level</span>
+    <h1 class="w-mega" id="scenes-title" data-split>Pick a <em>scene.</em></h1>
+    <p class="w-lede reveal">
+      Every movie has them: the song that jumps, the blast that shakes the room and the whisper you lean in for.
+      Turn the table, then drag each scene from before to after.
+    </p>
+    <div class="w-cue reveal"><span class="label">Scroll to turn the table</span><i></i></div>
+  </section>
+
+  <section class="chapter" id="song" data-w="1" aria-labelledby="song-title">
+    <div class="ch-copy">
+      <span class="label">Scene one · The surge</span>
+      <h2 class="ch-title" id="song-title" data-split>The <em>Song</em></h2>
+      <p class="ch-lede reveal">
+        A dance number starts and the volume jumps. Bollywood loves a big song, and so do we, just not at twice the
+        volume of the conversation before it. Volume Guard pulls the song down to your level within a moment.
+      </p>
+      <ul class="facts reveal">
+        <li><b>Before</b><span>Song mixed far above the dialogue</span></li>
+        <li><b>After</b><span>Brought down to your target, quickly</span></li>
+        <li><b>You do</b><span>Nothing</span></li>
+      </ul>
+      <div class="compare reveal">
+        <label class="label" for="cmp-song">Before / after</label>
+        <input id="cmp-song" class="compare-range" type="range" min="0" max="100" value="100" data-compare="0" aria-valuetext="After: levelled" />
+        <div class="compare-ends" aria-hidden="true"><span>Before</span><span>After</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="interlude" aria-label="Interlude">
+    <p class="big-quote" data-split>Down for the song. <em>Up for the words.</em></p>
+  </section>
+
+  <section class="chapter right" id="blast" data-w="2" aria-labelledby="blast-title">
+    <div class="ch-copy">
+      <span class="label">Scene two · The spike</span>
+      <h2 class="ch-title" id="blast-title" data-split>The <em>Blast</em></h2>
+      <p class="ch-lede reveal">
+        Hollywood action: a car chase, a gunfight, then an explosion. The leveller lowers the scene, and a limiter
+        rounds off the sharpest peaks before they reach your ears.
+      </p>
+      <ul class="facts reveal">
+        <li><b>Before</b><span>Explosions far louder than speech</span></li>
+        <li><b>After</b><span>Lowered fast, peaks caught by the limiter</span></li>
+        <li><b>You do</b><span>Nothing</span></li>
+      </ul>
+      <div class="compare reveal">
+        <label class="label" for="cmp-blast">Before / after</label>
+        <input id="cmp-blast" class="compare-range" type="range" min="0" max="100" value="100" data-compare="1" aria-valuetext="After: levelled" />
+        <div class="compare-ends" aria-hidden="true"><span>Before</span><span>After</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="interlude" aria-label="Interlude">
+    <p class="big-quote" data-split>Loud is fine. <em>Too loud is not.</em></p>
+  </section>
+
+  <section class="chapter" id="whisper" data-w="3" aria-labelledby="whisper-title">
+    <div class="ch-copy">
+      <span class="label">Scene three · The dip</span>
+      <h2 class="ch-title" id="whisper-title" data-split>The <em>Whisper</em></h2>
+      <p class="ch-lede reveal">
+        Two people talk quietly and you lean towards the speaker. Volume Guard lifts the dialogue gently, with a boost
+        cap (6 dB on Normal) so background hiss never gets blown up.
+      </p>
+      <ul class="facts reveal">
+        <li><b>Before</b><span>Dialogue too quiet to follow</span></li>
+        <li><b>After</b><span>Lifted slowly, up to the boost cap</span></li>
+        <li><b>You do</b><span>Nothing</span></li>
+      </ul>
+      <div class="compare reveal">
+        <label class="label" for="cmp-whisper">Before / after</label>
+        <input id="cmp-whisper" class="compare-range" type="range" min="0" max="100" value="100" data-compare="2" aria-valuetext="After: levelled" />
+        <div class="compare-ends" aria-hidden="true"><span>Before</span><span>After</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-end" data-w="4" aria-labelledby="end-title">
+    <span class="eyebrow">Every scene</span>
+    <h2 class="w-mega" id="end-title" data-split>Your orb, <em>every scene.</em></h2>
+    <p class="w-lede reveal">The same level from the opening credits to the last line. See each control up close, or set it up now.</p>
+    <div class="w-end-row reveal">
+      <a class="btn magnet" href="/toolbox">
+        Open the toolbox
+        <span class="arrow"><svg class="icon" aria-hidden="true"><use href="/icons/sprite.svg#arrow" /></svg></span>
+      </a>
+      <a class="btn light" href="/docs/getting-started">Get started</a>
+    </div>
+  </section>
+</main>

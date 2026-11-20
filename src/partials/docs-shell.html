@@ -1,0 +1,19 @@
+<main id="main" class="docs-main">
+  <div class="docs-layout">
+    <aside class="docs-side" aria-label="Documentation">
+      <div class="docs-search" role="search">
+        <label class="sr" for="docs-q">Search the docs</label>
+        <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" />
+        <ol class="docs-results" aria-live="polite" hidden></ol>
+      </div>
+      <button class="docs-side-toggle" type="button" aria-expanded="false" aria-controls="docs-nav">Docs menu</button>
+      <nav id="docs-nav" class="docs-nav" aria-label="Docs pages">{{{docSidebar}}}</nav>
+    </aside>
+    <article class="docs-article">
+      <p class="eyebrow">{{docGroup}}</p>
+      {{{docBody}}}
+      <nav class="pager" aria-label="Previous and next page">{{{docPager}}}</nav>
+    </article>
+    <aside class="docs-toc" aria-label="On this page">{{{docToc}}}</aside>
+  </div>
+</main>
